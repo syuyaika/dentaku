@@ -47,6 +47,7 @@ function buttonPressed(event) {
             return; 
         } else if (calculated && isNaN(text)) {
             concatText += text;
+            result.textContent = concatText;
             lastOperator = true;
             needsNumber = true; 
             calculated = false;
@@ -69,6 +70,7 @@ function buttonPressed(event) {
             } else {
                 lastOperator = true; 
             }
+            dot = false;
         } else {
             lastOperator = false; 
         }
